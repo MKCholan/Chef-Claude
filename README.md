@@ -1,19 +1,43 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# Chef Claude 🍳
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+An AI-powered recipe generator built with React. Add the ingredients you currently have on hand, and Chef Claude will suggest a delicious recipe using Hugging Face / Anthropic AI models.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could go further with one of our advanced courses 🚀
+Built as part of the Scrimba Fullstack Developer Path (React.js Fundamentals).
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+---
 
-Happy Coding!
+## Features
+
+- **Ingredient Tracker:** Add ingredients dynamically to build your current pantry list.
+- **Conditional Rendering:** Context-aware UI that prompts for recipe generation once sufficient ingredients are added.
+- **AI-Powered Recipes:** Fetches tailored recipe recommendations using modern LLM APIs (`@anthropic-ai/sdk` / `@huggingface/inference`).
+- **Markdown Rendering:** Formats generated recipes cleanly using `react-markdown`.
+- **Modern Form Handling:** Uses React 19 form actions and state management best practices.
+
+---
+
+## Tech Stack
+
+- **React 19**
+- **Vite / Scrimba Scaffolding**
+- **CSS3** (Custom Responsive Layout)
+- **Anthropic AI SDK / Hugging Face Inference**
+- **React Markdown**
+
+---
+
+## Project Structure
+
+```text
+├── components/
+│   ├── ClaudeRecipe.jsx     # Renders the markdown recipe response
+│   ├── Header.jsx           # App navbar and branding
+│   ├── IngredientsList.jsx  # Pantry list and "Get Recipe" CTA
+│   └── Main.jsx             # Core state, form handling, and layout
+├── images/
+│   └── chef-claude-icon.png
+├── ai.js                    # LLM API integration logic
+├── App.jsx                  # Root wrapper
+├── index.css                # Global styles
+├── index.jsx                # Entry point
+└── recipeCode.md            # Reference prompt / markdown templates
